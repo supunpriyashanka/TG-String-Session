@@ -15,13 +15,13 @@ from pyrogram.errors import (
 API_TEXT = """Hi, {}.
 This is Pyrogram's String Session Generator Bot. I will generate String Session of your Telegram Account.
 
-By @Discovery_Updates
+By @NET_HACKER_BOTs_chat
 
 Now send your `API_ID` same as `APP_ID` to Start Generating Session."""
 HASH_TEXT = "Now send your `API_HASH`.\n\nPress /cancel to Cancel Task."
 PHONE_NUMBER_TEXT = (
     "Now send your Telegram account's Phone number in International Format. \n"
-    "Including Country code. Example: **+14154566376**\n\n"
+    "Including Country code. Example: **+94761234567**\n\n"
     "Press /cancel to Cancel Task."
 )
 
@@ -124,7 +124,7 @@ async def genStr(_, msg: Message):
         return
     try:
         session_string = await client.export_session_string()
-        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@StringSessionGen_Bot](tg://openmessage?user_id=1472531255) \nA Bot By @Discovery_Updates")
+        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@NetStringSessionGen_Bot](tg://openmessage?user_id=1472531255) \nA Bot By @NET_HACKER_BOTs_chat")
         await client.disconnect()
         text = "String Session is Successfully Generated.\nClick on Below Button."
         reply_markup = InlineKeyboardMarkup(
